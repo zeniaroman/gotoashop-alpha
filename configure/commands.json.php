@@ -9,5 +9,11 @@
 	"/api-v1": {
 		"class": "ApiCmd",
 		"template": false
+	},
+	"/test": {
+		"class": "TestCmd",
+		"view": "TestView",
+		"template": false
 	}
+	
 }
