@@ -14,7 +14,7 @@ class ApiCmd extends Command
 		$response->setBody(null);
 
 		$methods = get_class_methods(self::class);
-		$action = action\Factory::get($request->getAction());
+		$action = action\Factory::get($request->getAction() ?? '');
 
 		if($action) {
 			$action->resetReqRes($request, $response);
