@@ -4,6 +4,7 @@ $regApp = App\base\RegistryApplication::i();
 $clientFiles = $regApp->getFrontEndClientFiles();
 
 // var_dump( App\system\factory\Registry::i()->req()->getRequest()->getRoot() );
+var_dump( App\system\factory\Registry::i()->cookie()->getAuthCookie() );
 
 ?>
 <!DOCTYPE html>
