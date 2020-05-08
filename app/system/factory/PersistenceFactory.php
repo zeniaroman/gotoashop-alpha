@@ -17,7 +17,7 @@ abstract class PersistenceFactory
 	{
 		$class = explode('\\', $targetClass);
 
-		$persistenceClass = '\App\component\\' . end($class) . '\\' . ucfirst(end($class)) . self::$prefix;
+		$persistenceClass = '\App\component\\' . strtolower(end($class)) . '\\' . ucfirst(end($class)) . self::$prefix;
 
 		return new $persistenceClass();
 
