@@ -22,9 +22,9 @@ class ActionAuth extends Action {
 			$this->check();
 		}
 
-		if($request->isGET() && $request->isProperty('check')) {
-			$this->check();
-		}
+		// if($request->isGET() && $request->isProperty('check')) {
+		// 	$this->check();
+		// }
 
 
 		if($request->isGET() && $request->isProperty('logout')) {
