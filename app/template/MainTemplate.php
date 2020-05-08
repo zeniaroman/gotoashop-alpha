@@ -3,6 +3,8 @@
 $regApp = App\base\RegistryApplication::i();
 $clientFiles = $regApp->getFrontEndClientFiles();
 
+// var_dump( App\system\factory\Registry::i()->req()->getRequest()->getRoot() );
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

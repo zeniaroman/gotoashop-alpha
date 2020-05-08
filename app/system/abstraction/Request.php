@@ -54,14 +54,14 @@ abstract class Request
 			$rootFilePath = $_SERVER['SCRIPT_FILENAME'];
 			$rootFile = explode('/', $rootFilePath);
 
-			$rootFile = '/' . end($rootFile);
+			$rootFile = end($rootFile);
 			$position = strpos($rootFilePath, $rootServerDir) + strlen($rootServerDir) + 1;
 
 			$rootScriptFilePath = substr($_SERVER['SCRIPT_FILENAME'], $position);
 			$rootScriptDir = '/' . str_replace($rootFile, '', $rootScriptFilePath);
-		
-			$this->root = $rootScriptDir;
-			$this->root = (substr($this->root, -1) != '/') ? $this->root . '/' : $this->root;
+
+			$this->root = rtrim($rootScriptDir, '/');
+			$this->root = !empty($this->root) ? $this->root : '/';
 		}
 
 		return $this->root;
