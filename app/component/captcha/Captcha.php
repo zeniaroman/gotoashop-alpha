@@ -35,11 +35,11 @@ class Captcha extends DomainObject
 	{
 		$this->token = bin2hex(random_bytes(2));
 
-		$captcha = imagecreatetruecolor(80, 40);
-		$text_color = imagecolorallocate($captcha, 0, 0, 0);
+		$captcha = \imagecreatetruecolor(80, 40);
+		$text_color = \imagecolorallocate($captcha, 0, 0, 0);
 
-		imagefilledrectangle($captcha, 0, 0, 80, 40, 
-			imagecolorallocate($captcha, 255, 255, 255)
+		\imagefilledrectangle($captcha, 0, 0, 80, 40, 
+			\imagecolorallocate($captcha, 255, 255, 255)
 		);
 		
 		$w = 80;
@@ -57,10 +57,10 @@ class Captcha extends DomainObject
 			$x2[$i] = rand(0, (int) round($w));
 			$y2[$i] = rand(0, (int) round($h));
 
-			$color = imagecolorallocate($captcha, rand(55, 210), rand(55, 210), rand(55, 210));
+			$color = \imagecolorallocate($captcha, rand(55, 210), rand(55, 210), rand(55, 210));
 
-			imageellipse($captcha, $x1[$i], $y1[$i], $x2[$i], $y2[$i], $color);
-			imageline($captcha, $x1[$i], $y1[$i], $x2[$i], $y2[$i], $color);
+			\imageellipse($captcha, $x1[$i], $y1[$i], $x2[$i], $y2[$i], $color);
+			\imageline($captcha, $x1[$i], $y1[$i], $x2[$i], $y2[$i], $color);
 		}
 
 		$firstRandNum = rand(1, 4);
@@ -69,12 +69,12 @@ class Captcha extends DomainObject
 
 		$this->setResult($firstRandNum + $secondRandNum);
 
-		imagestring($captcha, 4, 8, 12,  $captchaText, $text_color);
+		\imagestring($captcha, 4, 8, 12,  $captchaText, $text_color);
 
 		ob_start();
 
-		imagepng($captcha);
-		imagedestroy($captcha);
+		\imagepng($captcha);
+		\imagedestroy($captcha);
 
 		$captcha = ob_get_clean();
 
