@@ -122,12 +122,12 @@ class Auth extends DomainObject
     return true;
   }
 
-  public static function signup( string $email, string $key ): bool
+  public static function signup( string $email, string $password ): bool
   {
     $captcha = Reg::i()->session()->getCaptcha();
 
     if($captcha['resolve']) {
-      return self::createUser($email, $key);
+      return self::createUser($email, $password);
     }
 
     return false;
@@ -359,10 +359,11 @@ class Auth extends DomainObject
   private static function createUser( string $email, string $password ): bool
   {
     if(self::findByEmail($email)) {
+      // set request feedback
       return false;
     }
 
-    new Auth(0, 1, '', $email, '', self::passwordToHash($password), 'Username', '', '', '', '');
+    new Auth(0, 3, $email, self::passwordToHash($password), '', 'Visitor', '', '', '', '', '');
 
     return true;
   }

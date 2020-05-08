@@ -29,7 +29,7 @@ class AuthMapper extends Mapper
 		);
 
 		$this->insertStmt = $this->pdo->prepare(
-			"INSERT INTO users (permission, username, email, `key`, hash, name, avatar, json, reg_date, session_tokens) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )"
+			"INSERT INTO users (permission, email, hash, `key`, name, username, avatar, json, reg_date, session_tokens) VALUES( ?, ?, ?, ?, ?, ?, ?, ?, ?, ? )"
 		);
 
 		$this->findByEmailStmt = $this->pdo->prepare(
