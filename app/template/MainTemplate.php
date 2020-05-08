@@ -9,7 +9,6 @@ $clientFiles = $regApp->getFrontEndClientFiles();
 <head>
   <meta charset="UTF-8">
   <title>Gotoashop | Make shopping easy with local shops online</title>
-
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1">
   <style>
     *{margin: 0;padding: 0;font-size: 16px;letter-spacing: .02em;box-sizing: border-box;}
