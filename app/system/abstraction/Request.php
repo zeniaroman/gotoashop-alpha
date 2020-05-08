@@ -48,7 +48,19 @@ abstract class Request
 	public function getRoot(): string
 	{
 		if(is_null($this->root)) {
-			$this->root = pathinfo($_SERVER['PHP_SELF'])['dirname'];
+			$documentRootArray = explode('/', $_SERVER['DOCUMENT_ROOT']);
+			$rootServerDir = end($documentRootArray);
+
+			$rootFilePath = $_SERVER['SCRIPT_FILENAME'];
+			$rootFile = explode('/', $rootFilePath);
+
+			$rootFile = '/' . end($rootFile);
+			$position = strpos($rootFilePath, $rootServerDir) + strlen($rootServerDir) + 1;
+
+			$rootScriptFilePath = substr($_SERVER['SCRIPT_FILENAME'], $position);
+			$rootScriptDir = '/' . str_replace($rootFile, '', $rootScriptFilePath);
+		
+			$this->root = $rootScriptDir;
 			$this->root = (substr($this->root, -1) != '/') ? $this->root . '/' : $this->root;
 		}
 
