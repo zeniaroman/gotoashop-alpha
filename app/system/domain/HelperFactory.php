@@ -24,12 +24,12 @@ class HelperFactory
 	private static function getClass(string $type, string $prefix): string
 	{
 		$type = explode('\\', $type);
-		$class = '\App\component\\' . end($type) . '\\' . ucfirst(end($type)) . $prefix;
+		$class = '\App\component\\' . strtolower(end($type)) . '\\' . ucfirst(end($type)) . $prefix;
 
 		if(class_exists($class)) {
 			return $class;
 		}
 
-		throw new \Exception('Unknown: ' . $class);
+		throw new \Exception('Unknown class: ' . $class);
 	}
 }
