@@ -8,6 +8,8 @@ class ActionAuth extends Action {
 	{
 		$request = $this->request;
 
+		// var_dump($request->getMethod());
+
 		$this->response->setStatus(421);
 
 		if($request->isPOST() && $request->isProperty('signup')) {
@@ -22,9 +24,9 @@ class ActionAuth extends Action {
 			$this->check();
 		}
 
-		// if($request->isGET() && $request->isProperty('check')) {
-		// 	$this->check();
-		// }
+		if($request->isGET() && $request->isProperty('check')) {
+			$this->check();
+		}
 
 
 		if($request->isGET() && $request->isProperty('logout')) {
