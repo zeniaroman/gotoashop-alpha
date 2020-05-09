@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost:3306
--- Время создания: Май 08 2020 г., 18:41
+-- Время создания: Май 09 2020 г., 15:31
 -- Версия сервера: 5.7.23
 -- Версия PHP: 7.2.10
 
@@ -63,8 +63,9 @@ CREATE TABLE `goods` (
 --
 
 INSERT INTO `goods` (`id`, `store`, `seller`, `name`, `price`, `amount`, `preview`, `images`, `description`) VALUES
-(1, 1, 1, 'Individual Online Lesson', '$ 25', '1h', '', '', ''),
-(2, 1, 1, 'Group Online Lesson', '$ 10', '1h', '', '', '');
+(1, 1, 1, '	Cherry Cheesecake', '3.95', 'slice', '', '', ''),
+(2, 1, 1, '	NY Famous Cheesecake', '4.95', 'slice', '', '', ''),
+(3, 1, 1, 'Lemon CoconutCake', '1.95', 'slice', 'https://aclassictwist.com/wp-content/uploads/2018/01/Meyer-Lemon-Coconut-Cake-3-480x480.jpg', '', '');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,7 @@ CREATE TABLE `stores` (
 --
 
 INSERT INTO `stores` (`id`, `owner`, `country`, `city`, `area`, `name`, `payment`, `address`, `maplink`, `worktime`, `contact`, `description`, `preview`, `json`) VALUES
-(1, 1, 1, 'New York', 'Online', 'English Teacher', '', '', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1548761.119528575!2d-75.10031943786443!3d40.697670069222035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sua!4v1588963130964!5m2!1sen!2sua', '', '', '', 'https://cdn.dribbble.com/users/101713/screenshots/6597581/one.png', '');
+(1, 1, 1, 'New York', 'NY', 'Hudson Market Place', '', '755 9th Ave', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1548761.119528575!2d-75.10031943786443!3d40.697670069222035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sua!4v1588963130964!5m2!1sen!2sua', '', '', '', 'https://lh5.googleusercontent.com/p/AF1QipOACOK9QDYZB9v8WTQ1nM3NbgwSCO15pH03-1Fo=w426-h240-k-no', '');
 
 -- --------------------------------------------------------
 
@@ -121,8 +122,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `permission`, `email`, `hash`, `key`, `name`, `username`, `avatar`, `json`, `reg_date`, `session_tokens`) VALUES
-(1, 1, 'r@m.c', '$2y$05$Ro7QbDJ9vpuyrKf7WvbSeuDjrg7M8AlgXJ8vE1zkw9ct9B0pIasKC', '', '', '', '', '', '', '{\"1602754342\":{\"hash\":\"xRcoDSntvBY\"},\"1602757547\":{\"hash\":\"YMsPCRVu_1U\"}}'),
-(2, 3, 't@m.c', '$2y$05$BfOVWGfBpt1UtpTBTGqADeOTCKsnMiuua9B.rHTK2S/Z7l.sVWpC2', '', 'Visitor', '', '', '', '', '{\"1602783680\":{\"hash\":\"WBvzrxqgtDY\"}}');
+(1, 1, 'r@m.c', '$2y$05$Ro7QbDJ9vpuyrKf7WvbSeuDjrg7M8AlgXJ8vE1zkw9ct9B0pIasKC', '', '', '', '', '', '', '{\"1602754342\":{\"hash\":\"xRcoDSntvBY\"},\"1602757547\":{\"hash\":\"YMsPCRVu_1U\"},\"1602853466\":{\"hash\":\"thtp-jecXrc\"}}'),
+(2, 3, 't@m.c', '$2y$05$BfOVWGfBpt1UtpTBTGqADeOTCKsnMiuua9B.rHTK2S/Z7l.sVWpC2', '', 'Visitor', '', '', '', '', '[]');
 
 -- --------------------------------------------------------
 
@@ -199,7 +200,7 @@ ALTER TABLE `country`
 -- AUTO_INCREMENT для таблицы `goods`
 --
 ALTER TABLE `goods`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблицы `stores`
