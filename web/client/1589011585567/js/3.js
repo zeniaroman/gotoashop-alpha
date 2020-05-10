@@ -130,6 +130,17 @@ eval("\nvar fixRegExpWellKnownSymbolLogic = __webpack_require__(/*! ../internals
 
 /***/ }),
 
+/***/ "./src/components/App/Page.vue":
+/*!*************************************!*\
+  !*** ./src/components/App/Page.vue ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+eval("throw new Error(\"Module build failed (from ./node_modules/eslint-loader/index.js):\\nError: ENOENT: no such file or directory, open '/Volumes/Hard/Server/gotoashop.loc/front/src/components/App/Page.vue'\");\n\n//# sourceURL=webpack:///./src/components/App/Page.vue?");
+
+/***/ }),
+
 /***/ "./src/pages/Store.vue":
 /*!*****************************!*\
   !*** ./src/pages/Store.vue ***!
