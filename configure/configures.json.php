@@ -4,7 +4,7 @@
 		"mysql": {
 			"dsn": "mysql:host=localhost;dbname=goto_db_alpha;charset=utf8",
 			"user": "root",
-			"pass": ""
+			"pass": "root"
 		}
 	},
 	"componentsFolder": "/component",
