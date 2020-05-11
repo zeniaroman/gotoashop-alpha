@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d2080f9"],{a2d6:function(n,e,a){"use strict";a.r(e);var t=function(){var n=this,e=n.$createElement,a=n._self._c||e;return a("div",{staticClass:"page calendar-page"})},c=[],l={name:"Calendar",components:{},mounted:function(){}},s=l,u=a("2877"),o=Object(u["a"])(s,t,c,!1,null,null,null);e["default"]=o.exports}}]);
+//# sourceMappingURL=chunk-2d2080f9.27685fb3.js.map
