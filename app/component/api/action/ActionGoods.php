@@ -12,7 +12,7 @@ class ActionGoods extends ActionCmd {
 		$goods = null;
 
 		if($store) {
-		$goods = Good::findAllByStore($store);
+			$goods = Good::findAllByStore($store);
 		}
 
 		$goodsArray = [];

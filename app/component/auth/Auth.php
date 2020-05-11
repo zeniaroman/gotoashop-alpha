@@ -124,13 +124,13 @@ class Auth extends DomainObject
 
   public static function signup( string $email, string $password ): bool
   {
-    $captcha = Reg::i()->session()->getCaptcha();
+    // $captcha = Reg::i()->session()->getCaptcha();
 
-    if($captcha['resolve']) {
-      return self::createUser($email, $password);
-    }
+    // if($captcha['resolve']) {
+    return self::createUser($email, $password);
+    // }
 
-    return false;
+    // return false;
   }
 
   public static function signin(string $email, string $password = null, Auth $user = null): bool
