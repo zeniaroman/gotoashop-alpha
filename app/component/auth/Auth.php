@@ -271,6 +271,10 @@ class Auth extends DomainObject
       $user = self::find($id);
       $cookie = (object) $cookie;
 
+      if(!$user) {
+        return false;
+      }
+
       if(self::checkCookie($cookie, $user->getSessionTokensArray())){
         $user->setSessionToken($cookie->expiry);
         $token = $user->getSessionTokensArray()[$cookie->expiry]['hash'];
