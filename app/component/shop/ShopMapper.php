@@ -42,7 +42,7 @@ class ShopMapper extends Mapper
 		);
 
 		$this->findByLocationStmt = $this->pdo->prepare(
-			"SELECT shops.id, shops.owner, shops.country, shop_categories.name as category, shops.city, shops.area, shops.name, shops.rating, shops.verified, shops.payments, shops.address, shops.maplink, shops.worktime, shops.contact, shops.description, shops.preview, shops.joined, shops.referral FROM shops INNER JOIN shop_categories ON shops.category = shop_categories.id WHERE country=? AND city LIKE ?"
+			"SELECT shops.id, shops.owner, shops.country, shop_categories.name as category, shops.city, shops.area, shops.name, shops.rating, shops.verified, shops.payments, shops.address, shops.maplink, shops.worktime, shops.contact, shops.description, shops.preview, shops.joined, shops.referral FROM shops INNER JOIN shop_categories ON shops.category = shop_categories.id WHERE country=? AND city LIKE ? ORDER BY shops.id DESC LIMIT 0, 5"
 		);
 	}
 
