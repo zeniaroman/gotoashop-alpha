@@ -18,5 +18,20 @@
 	"page_home__how_step_order_text": "Закажите",
 	"page_home__how_step_order_desc": "Закажите и подождите пока магазин подготовит Ваш заказ",
 	"page_home__how_step_take_text": "Заберите",
-	"page_home__how_step_take_desc": "Когда заказ будет готов, посетите магазин в удобное время"
+	"page_home__how_step_take_desc": "Когда заказ будет готов, посетите магазин в удобное время",
+	"page_carts__title": "Корзины",
+	"page_carts__order_title": "Создать заказ",
+	"page_carts__order_amount": "Выбрано товаров",
+	"page_carts__order_price": "Итоговая цена",
+	"page_carts__order_button": "Созать",
+	"page_carts__cart_title": "Корзина",
+	"page_board__nav_link_orders": "Заказы",
+	"page_board__nav_link_shops": "Магазины",
+	"page_board__nav_link_account": "Аккаунт",
+	"components": "",
+	"cshop__description_title": "Коротко о магазине",
+	"cshop__actions_cart": "Корзина",
+	"cshop__actions_close": "Выход",
+	"cshop__goods_title": "Товары",
+	"cgood__in_cart": "в корзине"
 }

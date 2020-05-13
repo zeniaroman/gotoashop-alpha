@@ -17,5 +17,20 @@
 	"page_home__how_step_order_text": "Order",
 	"page_home__how_step_order_desc": "Order and wait, they prepare it",
 	"page_home__how_step_take_text": "Goto",
-	"page_home__how_step_take_desc": "Goto a shop when order prepared"
+	"page_home__how_step_take_desc": "Goto a shop when order prepared",
+	"page_carts__title": "Carts",
+	"page_carts__order_title": "Create order",
+	"page_carts__order_amount": "Total amount",
+	"page_carts__order_price": "Total price",
+	"page_carts__order_button": "Order",
+	"page_carts__cart_title": "Cart",
+	"page_board__nav_link_orders": "Orders",
+	"page_board__nav_link_shops": "Shops",
+	"page_board__nav_link_account": "Account",
+	"components": "",
+	"cshop__description_title": "About shop",
+	"cshop__actions_cart": "Cart",
+	"cshop__actions_close": "Exit",
+	"cshop__goods_title": "Goods",
+	"cgood__in_cart": "in cart"
 }
